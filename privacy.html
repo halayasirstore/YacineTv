@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Yacine TV Privacy Policy — How we collect, use, and protect your data." />
+<title>Privacy Policy · Yacine TV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg-0: #0b0410;
+    --bg-1: #160820;
+    --bg-2: #1f0c2e;
+    --burgundy: #7a1043;
+    --burgundy-2: #2a0817;
+    --rose: #d63a5f;
+    --accent: #e01838;
+    --gold: #f59e0b;
+    --text: #f4eef7;
+    --text-soft: #c5b8cf;
+    --text-mute: #9486a0;
+    --card: rgba(255, 255, 255, 0.04);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --card-hover: rgba(255, 255, 255, 0.07);
+    --shadow-glow: 0 20px 60px -20px rgba(214, 58, 95, 0.4);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg-0);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 20% 0%, rgba(122, 16, 67, 0.3), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 100% 30%, rgba(214, 58, 95, 0.15), transparent 60%),
+      radial-gradient(ellipse 40% 30% at 0% 70%, rgba(245, 158, 11, 0.08), transparent 60%);
+  }
+
+  /* Animated gradient background blob */
+  .bg-blob {
+    position: fixed;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(122, 16, 67, 0.5), transparent 70%);
+    filter: blur(80px);
+    z-index: -1;
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+
+  .bg-blob.b2 {
+    top: 50%;
+    left: -300px;
+    background: radial-gradient(circle, rgba(214, 58, 95, 0.3), transparent 70%);
+    animation-delay: -10s;
+  }
+
+  @keyframes drift {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(80px, 60px) scale(1.1); }
+    100% { transform: translate(-50px, 100px) scale(0.95); }
+  }
+
+  /* HERO */
+  header.hero {
+    text-align: center;
+    padding: 100px 24px 60px;
+    position: relative;
+    animation: fadeDown 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: linear-gradient(135deg, var(--burgundy), var(--rose));
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    animation: pulse 2.4s ease-in-out infinite;
+    box-shadow: var(--shadow-glow);
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.05); }
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    background: linear-gradient(180deg, #fff 0%, #d6c5e0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 16px;
+  }
+
+  .hero p.subtitle {
+    color: var(--text-soft);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .meta-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+    animation: fadeUp 1s 0.3s both cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .meta-pill {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-size: 13px;
+    color: var(--text-soft);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .meta-pill:hover {
+    background: var(--card-hover);
+    transform: translateY(-2px);
+    border-color: rgba(214, 58, 95, 0.4);
+  }
+
+  .meta-pill .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--rose);
+    box-shadow: 0 0 12px var(--rose);
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.6; transform: scale(0.85); }
+  }
+
+  /* MAIN CONTENT */
+  main {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 24px 120px;
+  }
+
+  section.card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(12px);
+    border-radius: 24px;
+    padding: 36px 32px;
+    margin-bottom: 24px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s ease;
+  }
+
+  section.card.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  section.card:hover {
+    background: var(--card-hover);
+  }
+
+  section h2 {
+    font-size: clamp(1.4rem, 3vw, 1.75rem);
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    letter-spacing: -0.02em;
+  }
+
+  section h2 .icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--rose) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 8px 24px -8px var(--rose);
+    transition: transform 0.3s ease;
+  }
+
+  section.card:hover h2 .icon {
+    transform: rotate(-6deg) scale(1.05);
+  }
+
+  section h2 .icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: #fff;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  section h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 22px 0 10px;
+    color: var(--text);
+  }
+
+  section p, section li {
+    color: var(--text-soft);
+    font-size: 0.98rem;
+  }
+
+  section ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  section ul li {
+    padding: 10px 0 10px 28px;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
+  section ul li:last-child {
+    border-bottom: none;
+  }
+
+  section ul li::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 18px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--rose), var(--accent));
+    box-shadow: 0 0 8px rgba(214, 58, 95, 0.6);
+  }
+
+  section strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  section a {
+    color: var(--rose);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(214, 58, 95, 0.3);
+    transition: all 0.2s ease;
+  }
+
+  section a:hover {
+    color: #fff;
+    border-bottom-color: var(--rose);
+  }
+
+  /* PERMISSION CARDS */
+  .perm-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 8px;
+  }
+
+  .perm {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 18px;
+    transition: all 0.3s ease;
+  }
+
+  .perm:hover {
+    border-color: rgba(214, 58, 95, 0.4);
+    transform: translateY(-3px);
+    background: rgba(122, 16, 67, 0.15);
+  }
+
+  .perm .perm-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--gold), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+  .perm .perm-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: #fff;
+    fill: none;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .perm h4 {
+    font-size: 0.92rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace, ui-monospace;
+  }
+
+  .perm p {
+    font-size: 0.85rem;
+    color: var(--text-mute);
+    line-height: 1.5;
+  }
+
+  /* THIRD-PARTY GRID */
+  .vendors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    margin-top: 8px;
+  }
+
+  .vendor {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 18px;
+    transition: all 0.3s ease;
+  }
+
+  .vendor:hover {
+    border-color: rgba(245, 158, 11, 0.4);
+    transform: translateY(-3px);
+  }
+
+  .vendor h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .vendor p {
+    font-size: 0.8rem;
+    color: var(--text-mute);
+    margin-bottom: 10px;
+  }
+
+  .vendor a {
+    font-size: 0.78rem;
+    word-break: break-all;
+  }
+
+  /* HIGHLIGHT BLOCK */
+  .highlight {
+    background: linear-gradient(135deg, rgba(122, 16, 67, 0.25), rgba(214, 58, 95, 0.1));
+    border: 1px solid rgba(214, 58, 95, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 18px 0;
+  }
+
+  .highlight strong {
+    color: var(--rose);
+  }
+
+  /* CONTACT BUTTON */
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--burgundy), var(--rose));
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    margin-top: 16px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-glow);
+  }
+
+  .contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 30px 60px -20px rgba(214, 58, 95, 0.6);
+    color: #fff;
+    border-bottom: none;
+  }
+
+  .contact-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: #fff;
+    fill: none;
+    stroke-width: 2;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 60px 24px 40px;
+    color: var(--text-mute);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--card-border);
+    margin-top: 60px;
+  }
+
+  footer .logo {
+    font-size: 1.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--rose), var(--gold));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+
+  /* TOC */
+  .toc {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 32px;
+    backdrop-filter: blur(12px);
+    animation: fadeUp 1s 0.5s both cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .toc h3 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-mute);
+    margin-bottom: 16px;
+  }
+
+  .toc ol {
+    list-style: none;
+    counter-reset: toc;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 4px;
+  }
+
+  .toc ol li {
+    counter-increment: toc;
+    padding: 8px 0;
+  }
+
+  .toc ol li a {
+    color: var(--text-soft);
+    text-decoration: none;
+    border-bottom: none;
+    font-size: 0.92rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s ease;
+  }
+
+  .toc ol li a::before {
+    content: counter(toc, decimal-leading-zero);
+    color: var(--rose);
+    font-family: 'JetBrains Mono', monospace, ui-monospace;
+    font-size: 0.75rem;
+    opacity: 0.7;
+  }
+
+  .toc ol li a:hover {
+    color: var(--text);
+    transform: translateX(4px);
+  }
+
+  .toc ol li a:hover::before {
+    color: var(--gold);
+    opacity: 1;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    section.card {
+      padding: 24px 20px;
+      border-radius: 18px;
+    }
+    section h2 {
+      font-size: 1.25rem;
+    }
+    section h2 .icon {
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+  /* Reduce motion */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-blob"></div>
+<div class="bg-blob b2"></div>
+
+<header class="hero">
+  <span class="badge">Privacy Policy</span>
+  <h1>Your privacy,<br>our priority</h1>
+  <p class="subtitle">
+    Yacine TV is built around a simple principle — collect only what we need,
+    nothing more. Here is exactly what that means.
+  </p>
+  <div class="meta-row">
+    <div class="meta-pill"><span class="dot"></span> Effective May 02, 2026</div>
+    <div class="meta-pill">📦 com.yacinetv.liveapp</div>
+    <div class="meta-pill">🌍 Available worldwide</div>
+  </div>
+</header>
+
+<main>
+
+<!-- TABLE OF CONTENTS -->
+<nav class="toc" aria-label="Table of contents">
+  <h3>Contents</h3>
+  <ol>
+    <li><a href="#what-we-collect">What we collect</a></li>
+    <li><a href="#what-we-dont">What we don't collect</a></li>
+    <li><a href="#permissions">Android permissions</a></li>
+    <li><a href="#how-we-use">How we use data</a></li>
+    <li><a href="#third-parties">Third-party services</a></li>
+    <li><a href="#ads">Personalized ads</a></li>
+    <li><a href="#storage">Data storage &amp; retention</a></li>
+    <li><a href="#security">Security</a></li>
+    <li><a href="#children">Children's privacy</a></li>
+    <li><a href="#rights">Your rights</a></li>
+    <li><a href="#international">International transfers</a></li>
+    <li><a href="#changes">Changes to this policy</a></li>
+    <li><a href="#contact">Contact us</a></li>
+  </ol>
+</nav>
+
+<!-- 1. WHAT WE COLLECT -->
+<section class="card" id="what-we-collect">
+  <h2>
+    <span class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </span>
+    What we collect
+  </h2>
+  <p>
+    Yacine TV does not require sign-up, login, or any personal account.
+    We only handle the minimum data needed to deliver scores, standings,
+    news, and notifications.
+  </p>
+
+  <h3>Information collected automatically</h3>
+  <ul>
+    <li><strong>Anonymous device ID</strong> — a random identifier generated on first launch, used so your favorites and notification subscriptions persist across sessions.</li>
+    <li><strong>Firebase Cloud Messaging (FCM) push token</strong> — required to deliver real-time notifications about kickoff, goals, half-time, and full-time.</li>
+    <li><strong>Device platform</strong> (Android / iOS) and <strong>language code</strong> (en / ar / fr) — so notifications are sent in the right language.</li>
+    <li><strong>App version</strong> — included in crash logs to diagnose problems.</li>
+    <li><strong>IP address</strong> — kept in standard server logs for abuse prevention only (max 30 days).</li>
+  </ul>
+
+  <h3>Information you choose to provide</h3>
+  <ul>
+    <li><strong>Match favorites</strong> — when you tap the star ⭐ on a match.</li>
+    <li><strong>Per-match notification preferences</strong> — when you tap the bell 🔔 on a match.</li>
+    <li><strong>Language preference</strong> — saved locally for the next launch.</li>
+  </ul>
+</section>
+
+<!-- 2. WHAT WE DON'T COLLECT -->
+<section class="card" id="what-we-dont">
+  <h2>
+    <span class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+    </span>
+    What we don't collect
+  </h2>
+  <p>The following are <strong>never</strong> requested or accessed:</p>
+  <ul>
+    <li>Your name, email address, phone number, or any account information.</li>
+    <li>Your physical location — no GPS, no <code>ACCESS_FINE_LOCATION</code>, no <code>ACCESS_COARSE_LOCATION</code>.</li>
+    <li>Your contacts, photos, microphone, camera, calendar, or files.</li>
+    <li>Any biometric data.</li>
+    <li>Browsing history outside our app.</li>
+  </ul>
+</section>
+
+<!-- 3. PERMISSIONS -->
+<section class="card" id="permissions">
+  <h2>
+    <span class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    </span>
+    Android permissions we request
+  </h2>
+  <p>Every permission below is essential for a single, specific feature. We request nothing else.</p>
+  <div class="perm-grid">
+    <div class="perm">
+      <div class="perm-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></div>
+      <h4>INTERNET</h4>
+      <p>Fetch live scores, standings, news, and team data from our servers.</p>
+    </div>
+    <div class="perm">
+      <div class="perm-icon"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+      <h4>POST_NOTIFICATIONS</h4>
+      <p>Required on Android 13+ to display match-event notifications.</p>
+    </div>
+    <div class="perm">
+      <div class="perm-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <h4>WAKE_LOCK</h4>
+      <p>Wake the device briefly when an important notification arrives.</p>
+    </div>
+    <div class="perm">
+      <div class="perm-icon"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><polyline points="21 4 21 12 13 12"/></svg></div>
+      <h4>RECEIVE_BOOT_COMPLETED</h4>
+      <p>Restore the FCM connection after device restart so notifications keep arriving.</p>
+    </div>
+    <div class="perm">
+      <div class="perm-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 17 6 17 12 14 12 14 18 11 18 11 14 8 14 8 20 5 20 5 14 1 14"/></svg></div>
+      <h4>VIBRATE</h4>
+      <p>Vibrate when a notification arrives, if your channel settings allow it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. HOW WE USE DATA -->
+<section class="card" id="how-we-use">
+  <h2>
+    <span class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    </span>
+    How we use your data
+  </h2>
+  <p>We process your data only to:</p>
+  <ul>
+    <li>Display live scores, standings, news, lineups, and statistics.</li>
+    <li>Send push notifications for matches you have subscribed to via the bell 🔔.</li>
+    <li>Remember your language, favorites, and preferences across sessions.</li>
+    <li>Show advertising (see §5 below).</li>
+    <li>Diagnose crashes and improve performance.</li>
+  </ul>
+  <div class="highlight">
+    <strong>We do not sell, rent, or trade your data to anyone — ever.</strong>
+  </div>
+</section>
+
+<!-- 5. THIRD PARTY -->
+<section class="card" id="third-parties">
+  <h2>
+    <span class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </span>
+    Third-party services
+  </h2>
+  <p>The App relies on the following SDKs. Each has its own privacy policy and acts as an independent data controller for the data its SDK collects.</p>
+  <div class="vendors">
+    <div class="vendor">
+      <h4>Google AdMob</h4>
+      <p>Primary advertising network.</p>
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>
+    </div>
+    <div class="vendor">
+      <h4>AppLovin (MAX)</h4>
+      <p>Mediated ad inventory via AdMob.</p>
+      <a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">applovin.com/privacy</a>
+    </div>
+    <div class="vendor">
+      <h4>Meta Audience Network</h4>
+      <p>Mediated ad inventory via AdMob.</p>
+      <a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">facebook.com/privacy/policy</a>
+    </div>
+    <div class="vendor">
+      <h4>ironSource (LevelPlay)</h4>
+      <p>Mediated ad inventory via AdMob.</p>
+      <a href="https://www.is.com/privacy-policy/" target="_blank" rel="noopener">is.com/privacy-policy</a>
+    </div>
+    <div class="vendor">
+      <h4>Huawei Ads (HMS AdsKit)</h4>
+      <p>Ad serving on Huawei devices without Google services.</p>
+      <a href="https://consumer.huawei.com/privacy-policy/" target="_blank" rel="noopener">consumer.huawei.com/privacy-policy</a>
+    </div>
+    <div class="vendor">
+      <h4>Firebase Cloud Messaging</h4>
+      <p>Push notification delivery.</p>
+      <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a>
+    </div>
+    <div class="vendor">
+      <h4>OneSignal</h4>
+      <p>Backup push notification provider.</p>
+      <a href="https://onesignal.com/privacy_policy" target="_blank" rel="noopener">onesignal.com/privacy_policy</a>
+    </div>
+    <div class="vendor">
+      <h4>Huawei AppGallery Connect</h4>
+      <p>App distribution and analytics on Huawei devices.</p>
+      <a href="https://consumer.huawei.com/privacy-policy/" target="_blank" rel="noopener">consumer.huawei.com/privacy-policy</a>
+    </div>
+  </div>
+</section>
+
+<!-- 6. ADS -->
+<section class="card" id="ads">
+  <h2>
+    <span class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+    </span>
+    Personalized advertising
+  </h2>
+  <p>
+    Where required by law (GDPR, CCPA, etc.), the App displays a consent dialog
+    before any personalized ad is shown. You can withdraw consent at any time
+    from your device settings:
+  </p>
+  <ul>
+    <li><strong>Android 12+:</strong> Settings → Privacy → Ads → "Delete advertising ID"</li>
+    <li><strong>Android 11 and below:</strong> Settings → Google → Ads → "Opt out of Ads Personalization"</li>
+    <li><strong>iOS:</strong> Settings → Privacy &amp; Security → Tracking → disable "Allow Apps to Request to Track"</li>
+  </ul>
+</section>
+
+<!-- 7. STORAGE -->
+<section class="card" id="storage">
+  <h2>
+    <span class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+    </span>
+    Data storage and retention
+  </h2>
+  <h3>On your device</h3>
+  <p>A local SQLite database and SharedPreferences store cached match data, language settings, favorites, dismissed notifications, and your FCM token. You can wipe everything by uninstalling the App or by clearing app data in Android settings.</p>
+
+  <h3>On our server</h3>
+  <p>We keep your <strong>device_id</strong>, <strong>fcm_token</strong>, language code, platform, and your match-subscription rows. These are removed when:</p>
+  <ul>
+    <li>You uninstall the App and your push token becomes invalid (we automatically delete dead tokens).</li>
+    <li>You request deletion via email (see §13).</li>
+  </ul>
+
+  <h3>Server access logs</h3>
+  <p>Standard web-server logs containing IP and request lines are kept for a maximum of 30 days for abuse prevention, then rotated.</p>
+</section>
+
+<!-- 8. SECURITY -->
+<section class="card" id="security">
+  <h2>
+    <span class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+    </span>
+    How we protect your data
+  </h2>
+  <ul>
+    <li>All API traffic is encrypted in transit with HTTPS / TLS.</li>
+    <li>Push notifications are delivered through OAuth-signed FCM v1 API.</li>
+    <li>We do not store passwords, payment information, or any personally identifiable data beyond the anonymous <code>device_id</code>.</li>
+  </ul>
+  <p>No method of electronic storage is 100% secure. We use commercially reasonable measures but cannot guarantee absolute security.</p>
+</section>
+
+<!-- 9. CHILDREN -->
+<section class="card" id="children">
+  <h2>
+    <span class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+    </span>
+    Children's privacy
+  </h2>
+  <p>
+    The App is <strong>not directed to children under 13</strong> (or the equivalent
+    minimum age in your jurisdiction). We do not knowingly collect data from
+    children. If you believe a child has provided us with information, please
+    contact us at <a href="mailto:lamadya@gmail.com">lamadya@gmail.com</a> and
+    we will delete it promptly.
+  </p>
+</section>
+
+<!-- 10. RIGHTS -->
+<section class="card" id="rights">
+  <h2>
+    <span class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+    </span>
+    Your rights
+  </h2>
+  <p>Depending on your jurisdiction (GDPR, CCPA, UK-GDPR, etc.) you have the right to:</p>
+  <ul>
+    <li><strong>Access</strong> the data we hold about your device.</li>
+    <li><strong>Delete</strong> your <code>device_id</code> and notification subscriptions from our server.</li>
+    <li><strong>Withdraw consent</strong> for personalized advertising.</li>
+    <li><strong>Object</strong> to processing for direct marketing.</li>
+    <li><strong>Lodge a complaint</strong> with your local data-protection authority.</li>
+  </ul>
+  <p>To exercise these rights, email <a href="mailto:lamadya@gmail.com">lamadya@gmail.com</a> from the device's email account or include the install date and device model so we can locate the relevant subscriptions.</p>
+</section>
+
+<!-- 11. INTERNATIONAL -->
+<section class="card" id="international">
+  <h2>
+    <span class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg>
+    </span>
+    International data transfers
+  </h2>
+  <p>
+    Our servers are hosted by Hostinger and Google Firebase in data centers
+    that may be located outside your country. By using the App you consent to
+    the transfer of your data to these locations under standard contractual
+    safeguards.
+  </p>
+</section>
+
+<!-- 12. CHANGES -->
+<section class="card" id="changes">
+  <h2>
+    <span class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/></svg>
+    </span>
+    Changes to this policy
+  </h2>
+  <p>
+    We may update this Privacy Policy occasionally. The <strong>Effective date</strong>
+    at the top of the page reflects the latest revision. Material changes will
+    be announced inside the App. Continued use after the effective date
+    constitutes acceptance of the revised policy.
+  </p>
+</section>
+
+<!-- 13. CONTACT -->
+<section class="card" id="contact">
+  <h2>
+    <span class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </span>
+    Contact us
+  </h2>
+  <p>
+    Questions, complaints, or data-deletion requests? Reach out anytime —
+    we typically respond within 7 days.
+  </p>
+  <a class="contact-btn" href="mailto:lamadya@gmail.com?subject=Privacy%20-%20Yacine%20TV">
+    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    Email lamadya@gmail.com
+  </a>
+</section>
+
+</main>
+
+<footer>
+  <div class="logo">YACINE TV</div>
+  <div>com.yacinetv.liveapp · Distributed via Google Play and Huawei AppGallery</div>
+  <div style="margin-top:6px; opacity:0.6;">© 2026 Yacine TV. All rights reserved.</div>
+</footer>
+
+<script>
+  // Reveal cards on scroll
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -60px 0px' }
+  );
+  document.querySelectorAll('section.card').forEach((el) => observer.observe(el));
+</script>
+
+</body>
+</html>
