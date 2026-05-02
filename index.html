@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Yacine TV Privacy Policy — How we collect, use, and protect your data." />
 <title>Privacy Policy · Yacine TV</title>
+<link rel="icon" type="image/png" href="app-icon.png" />
+<link rel="apple-touch-icon" href="app-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -80,9 +82,63 @@
   /* HERO */
   header.hero {
     text-align: center;
-    padding: 100px 24px 60px;
+    padding: 80px 24px 60px;
     position: relative;
     animation: fadeDown 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .app-logo {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 32px;
+    border-radius: 38px;
+    overflow: hidden;
+    position: relative;
+    box-shadow:
+      0 35px 80px -20px rgba(214, 58, 95, 0.75),
+      0 0 0 1px rgba(255, 255, 255, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    animation: logoFloat 3.5s ease-in-out infinite, logoIn 1s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+
+  .app-logo::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 42px;
+    padding: 3px;
+    background: conic-gradient(from 0deg, var(--gold), var(--rose), var(--burgundy), var(--accent), var(--gold));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.7;
+    animation: spin 6s linear infinite;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .app-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 36px;
+  }
+
+  @keyframes logoFloat {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+  }
+
+  @keyframes logoIn {
+    from { opacity: 0; transform: scale(0.5) rotate(-20deg); }
+    to   { opacity: 1; transform: scale(1) rotate(0deg); }
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
   }
 
   .badge {
@@ -449,6 +505,20 @@
     letter-spacing: -0.02em;
   }
 
+  footer .footer-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    margin: 0 auto 14px;
+    display: block;
+    box-shadow: 0 10px 30px -8px rgba(214, 58, 95, 0.4);
+    transition: transform 0.3s ease;
+  }
+
+  footer .footer-icon:hover {
+    transform: rotate(-6deg) scale(1.05);
+  }
+
   /* TOC */
   .toc {
     background: var(--card);
@@ -554,6 +624,9 @@
 <div class="bg-blob b2"></div>
 
 <header class="hero">
+  <div class="app-logo" aria-hidden="true">
+    <img src="app-icon.png" alt="Yacine TV" loading="eager" />
+  </div>
   <span class="badge">Privacy Policy</span>
   <h1>Your privacy,<br>our priority</h1>
   <p class="subtitle">
@@ -820,7 +893,7 @@
     The App is <strong>not directed to children under 13</strong> (or the equivalent
     minimum age in your jurisdiction). We do not knowingly collect data from
     children. If you believe a child has provided us with information, please
-    contact us at <a href="mailto:lamadya@gmail.com">lamadya@gmail.com</a> and
+    contact us at <a href="mailto:jwatchtech@gmail.com">jwatchtech@gmail.com</a> and
     we will delete it promptly.
   </p>
 </section>
@@ -841,7 +914,7 @@
     <li><strong>Object</strong> to processing for direct marketing.</li>
     <li><strong>Lodge a complaint</strong> with your local data-protection authority.</li>
   </ul>
-  <p>To exercise these rights, email <a href="mailto:lamadya@gmail.com">lamadya@gmail.com</a> from the device's email account or include the install date and device model so we can locate the relevant subscriptions.</p>
+  <p>To exercise these rights, email <a href="mailto:jwatchtech@gmail.com">jwatchtech@gmail.com</a> from the device's email account or include the install date and device model so we can locate the relevant subscriptions.</p>
 </section>
 
 <!-- 11. INTERNATIONAL -->
@@ -888,15 +961,16 @@
     Questions, complaints, or data-deletion requests? Reach out anytime —
     we typically respond within 7 days.
   </p>
-  <a class="contact-btn" href="mailto:lamadya@gmail.com?subject=Privacy%20-%20Yacine%20TV">
+  <a class="contact-btn" href="mailto:jwatchtech@gmail.com?subject=Privacy%20-%20Yacine%20TV">
     <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-    Email lamadya@gmail.com
+    Email jwatchtech@gmail.com
   </a>
 </section>
 
 </main>
 
 <footer>
+  <img class="footer-icon" src="app-icon.png" alt="Yacine TV" />
   <div class="logo">YACINE TV</div>
   <div>com.yacinetv.liveapp · Distributed via Google Play and Huawei AppGallery</div>
   <div style="margin-top:6px; opacity:0.6;">© 2026 Yacine TV. All rights reserved.</div>
